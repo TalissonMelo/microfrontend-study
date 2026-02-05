@@ -1,1 +1,14 @@
-<h1>Hello, {{ title() }}</h1>
+<div class="container">
+    <h1>Lista de Produtos</h1>
+
+    <div class="produtos">
+        @for (product of products; track products) {
+            <div class="card" >
+                <img [src]="product.image" [alt]="product.name" />
+                <h2>{{ product.name }}</h2>
+                <p class="valor"> R$ {{ product.price }} </p>
+                <button>Adicionar ao Carrinho</button>
+            </div>
+        }
+    </div>
+</div>
