@@ -11,6 +11,13 @@ export const routes: Routes = [
             exposedModule: './Component'
         }).then(m => m.App)
     },
+    {
+        path: 'carts', loadComponent: () => loadRemoteModule({
+            type: 'module',
+            remoteEntry: 'http://localhost:4201/remoteEntry.js',
+            exposedModule: './Cart'
+        }).then(m => m.Cart)
+    },
 
     {
         path: 'graphics', loadComponent: () => loadRemoteModule({
